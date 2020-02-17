@@ -1,0 +1,76 @@
+
+#site-title{
+	font-family: 'Press Start 2P',sans-serif;
+}
+
+#main-header{
+	/*border: 1px dashed black;*/
+	/*border-top: none;*/
+	border-bottom: 2px solid #000;
+
+}
+
+#top-stories{
+	width: 1000px; 
+	margin:auto; /*center it*/
+	margin-top: 20px;
+}
+
+
+/*assign a grid*/
+article {
+
+	width: 301px; /*places them well on the same width*/
+
+	/*max-width: 30%;*/ /*maximum width for (responsive width)*/
+	display: inline-block; /*put them on one line*/
+	/*add a border, we shall use for responsive media queries*/
+	/*border:1px solid #000;*/
+
+	border:1px solid gray;
+	margin: 0px;
+	padding: 10px;
+	box-shadow: 1px 2px 3px #000;
+	/*box-shadow: L/R T/B spread color*/
+}
+
+/*size all images in the article at the same width*/
+article img {
+	/*same width, different height given the initial size	
+	 images strech well to a reasonable size of each image
+	 if width:100%, images are squeed*/
+	max-width: 100%; /*images are contained but with different heights given height of different image*/
+
+	/*to come up with a solution, we put images in a div(replace img tag with div tag), out an inline style of background-image:url(), give the div a class below*/
+
+}
+
+/*class that styles images properly*/
+.article-image {
+	/*if height isn't specified, images don't display*/
+	height: 200px;
+	width: 100% ;
+	background-size: cover !important; /*to avoid tiles in images*/
+	background-position: center !important;
+}
+
+article:active {
+	opacity: .4; /*transparent on mouse down*/
+}
+
+.my-input {
+	display: block;
+	width: 90%;
+	margin:10px;
+	padding:10px 20px;
+	border: 1px solid transparent;
+	
+}
+
+.my-input:focus {
+	background-color: #aaf5ce;
+	color: #22764e ;
+	outline: none;
+	border: 1px solid transparent;
+	border-radius: 13px;
+}
